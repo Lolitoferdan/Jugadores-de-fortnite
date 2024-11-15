@@ -137,8 +137,6 @@
             width: 300px;
             height: 400px;
             background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
-            background-size: cover; /* Hace que la imagen de fondo cubra todo el cuadro */
-            background-position: center; /* Centra la imagen */
             color: white;
             border-radius: 15px;
             margin: 20px;
@@ -147,6 +145,14 @@
             position: relative;
             text-align: center;
             padding: 20px;
+        }
+
+        /* Estilo para la imagen dentro del cuadro */
+        .player-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Hace que la imagen ocupe todo el cuadro */
+            border-radius: 15px;
         }
 
         /* Estilo para el título dentro del cuadro */
@@ -181,20 +187,23 @@
 </head>
 <body>
 
-    <!-- Cuadro del jugador Bugha con fondo de imagen de GitHub -->
-    <div class="player-box" style="background-image: url('https://github.com/Lolitoferdan/tienda-pro/blob/main/images/bugha.jpg?raw=true');">
+    <!-- Cuadro del jugador Bugha con imagen de GitHub -->
+    <div class="player-box">
+        <img src="https://github.com/Lolitoferdan/tienda-pro/blob/main/images/bugha.jpg?raw=true" alt="Bugha">
         <h3>Bugha</h3>
         <a href="detalles-bugha.html" class="btn-more">Saber más</a>
     </div>
 
-    <!-- Cuadro del jugador Aqua con fondo de imagen de GitHub -->
-    <div class="player-box" style="background-image: url('aqua.jpg');">
+    <!-- Cuadro del jugador Aqua con imagen de GitHub -->
+    <div class="player-box">
+        <img src="https://github.com/Lolitoferdan/tienda-pro/blob/main/images/aqua.jpg?raw=true" alt="Aqua">
         <h3>Aqua</h3>
-        <a href="detalles-Aqua.html" class="btn-more">Saber más</a>
+        <a href="detalles-aqua.html" class="btn-more">Saber más</a>
     </div>
 
-    <!-- Cuadro del jugador Ninja con fondo de imagen de GitHub -->
-    <div class="player-box" style="background-image: url('https://github.com/Lolitoferdan/tienda-pro/blob/main/images/ninja.jpg?raw=true');">
+    <!-- Cuadro del jugador Ninja con imagen de GitHub -->
+    <div class="player-box">
+        <img src="https://github.com/Lolitoferdan/tienda-pro/blob/main/images/ninja.jpg?raw=true" alt="Ninja">
         <h3>Ninja</h3>
         <a href="detalles-ninja.html" class="btn-more">Saber más</a>
     </div>
