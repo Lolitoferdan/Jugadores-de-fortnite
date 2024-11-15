@@ -18,6 +18,7 @@
             padding: 0;
             background-color: #181818;
             color: #ddd;
+            letter-spacing: 0.8px; /* Separar las letras un poco */
         }
 
         /* Estilos de la barra de navegación */
@@ -96,7 +97,7 @@
 
         .btn-more {
             position: absolute;
-            bottom: 10px;
+            bottom: 30px; /* Ajustado para moverlo más abajo */
             left: 50%;
             transform: translateX(-50%);
             background-color: #ff5722;
@@ -122,7 +123,12 @@
             }
         }
 
-        /* Página Acerca de */
+        /* Animaciones de carga de los cuadros */
+        .player-box {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Sección Acerca de */
         .about {
             padding: 40px;
             background-color: #333;
@@ -141,17 +147,13 @@
             margin: 0 auto;
         }
 
-        /* Animaciones de carga de los cuadros */
-        .player-box {
-            animation: fadeIn 1s ease-out;
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
-
-        /* Detalles de la imagen */
-        .details-img {
-            margin-top: 20px;
-            animation: fadeIn 1s ease-out;
-        }
-
     </style>
 </head>
 <body>
@@ -164,7 +166,7 @@
     <!-- Menú -->
     <div class="menu">
         <a href="#jugadores">Jugadores</a>
-        <a href="#acerca">Acerca de</a>
+        <a href="acerca.html">Acerca de</a> <!-- Enlace a la página acerca.html -->
     </div>
 
     <!-- Sección Jugadores -->
@@ -187,12 +189,6 @@
             <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo convirtieron en una estrella global.</p>
             <a href="detalles-ninja.html" class="btn-more">Saber más</a>
         </div>
-    </div>
-
-    <!-- Sección Acerca de -->
-    <div class="about" id="acerca">
-        <h2>Acerca de este sitio</h2>
-        <p>Este sitio está dedicado a los jugadores más destacados de Fortnite. Aquí podrás conocer más sobre sus logros, estilo de juego y cómo llegaron a la cima del mundo competitivo de Fortnite.</p>
     </div>
 
     <!-- Footer -->
