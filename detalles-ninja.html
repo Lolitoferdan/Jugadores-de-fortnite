@@ -12,111 +12,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Press Start 2P', cursive;
-            margin: 0;
-            padding: 0;
-            background-color: #181818;
-            color: #ddd;
-        }
-
-        header {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .back-button {
-            display: inline-block;
-            background-color: #ff5722;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #e64a19;
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .details-text {
-            max-width: 50%;
-            animation: fadeInLeft 1s ease-out;
-        }
-
-        .details-text h2 {
-            font-size: 40px;
-            color: #fff;
-        }
-
-        .details-text p {
-            font-size: 20px;
-            color: #bbb;
-        }
-
-        .details-img {
-            max-width: 40%;
-            animation: fadeInRight 1s ease-out;
-        }
-
-        .details-img img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Animación de Fade-In */
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+        /* Estilo igual que el de Bugha, solo cambiar el contenido */
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Detalles de Ninja</h1>
-</header>
+    <!-- Header -->
+    <header>
+        <h1>Detalles de Ninja</h1>
+    </header>
 
-<div class="content">
-    <div class="details-text">
-        <h2>Ninja - El Ícono de Fortnite</h2>
-        <p>Ninja es uno de los streamers más famosos y un pionero en la escena competitiva de Fortnite. Su personalidad carismática y habilidades excepcionales le han permitido alcanzar una gran audiencia y el éxito en múltiples plataformas.</p>
-        <p>Fue uno de los primeros en popularizar Fortnite en la escena global y es reconocido por su destreza en los combates más intensos.</p>
-        <a href="index.html" class="back-button">Volver a la página principal</a>
+    <!-- Contenido -->
+    <div class="content">
+        <!-- Cuadro 1: Historia -->
+        <div class="left-box">
+            <h2>Historia</h2>
+            <p>
+                Ninja, conocido como Tyler Blevins, es uno de los jugadores más icónicos en la historia de Fortnite. Fue uno de los primeros en alcanzar fama mundial a través del juego, gracias a su habilidad y su gran presencia en plataformas de streaming como Twitch y YouTube.
+            </p>
+        </div>
+
+        <!-- Cuadro 2: Sensibilidad y Controles -->
+        <div class="left-box">
+            <h2>Sensibilidad y Controles</h2>
+            <p>
+                Sensibilidad de mira: 0.40<br>
+                Sensibilidad de construcción: 1.50<br>
+                Controles personalizados: Ninja usa un teclado y ratón con configuraciones para máxima precisión, y su setup incluye una alta sensibilidad para ejecutar movimientos rápidos.
+            </p>
+        </div>
+
+        <!-- Imagen de Ninja -->
+        <div class="image-container">
+            <img src="images/Ninja.jpg" alt="Ninja">
+        </div>
     </div>
 
-    <div class="details-img">
-        <img src="images/Ninja.jpg" alt="Ninja">
-    </div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
