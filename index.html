@@ -118,5 +118,87 @@
 <a href="detalles-aqua.html" class="btn">Saber más</a>
 <a href="detalles-ninja.html" class="btn">Saber más</a>
 <a href="acerca.html" class="btn">Acerca de</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores de Fortnite</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilo general para los cuadros de los jugadores */
+        .player-box {
+            width: 300px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
+            background-size: cover; /* Hace que la imagen de fondo cubra todo el cuadro */
+            background-position: center; /* Centra la imagen */
+            color: white;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo para el título dentro del cuadro */
+        .player-box h3 {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para el enlace de "Saber más" */
+        .btn-more {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-more:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cuadro del jugador Bugha con fondo de imagen de GitHub -->
+    <div class="player-box" style="background-image: url('https://github.com/Lolitoferdan/tienda-pro/blob/main/images/bugha.jpg?raw=true');">
+        <h3>Bugha</h3>
+        <a href="detalles-bugha.html" class="btn-more">Saber más</a>
+    </div>
+
+    <!-- Cuadro del jugador Aqua con fondo de imagen de GitHub -->
+    <div class="player-box" style="background-image: url('https://github.com/Lolitoferdan/tienda-pro/blob/main/images/aqua.jpg?raw=true');">
+        <h3>Aqua</h3>
+        <a href="detalles-aqua.html" class="btn-more">Saber más</a>
+    </div>
+
+    <!-- Cuadro del jugador Ninja con fondo de imagen de GitHub -->
+    <div class="player-box" style="background-image: url('https://github.com/Lolitoferdan/tienda-pro/blob/main/images/ninja.jpg?raw=true');">
+        <h3>Ninja</h3>
+        <a href="detalles-ninja.html" class="btn-more">Saber más</a>
+    </div>
+
 </body>
 </html>
+
