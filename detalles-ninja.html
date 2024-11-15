@@ -73,4 +73,50 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
-       
+        }
+
+        /* Animación de Fade-In */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Detalles de Ninja</h1>
+</header>
+
+<div class="content">
+    <div class="details-text">
+        <h2>Ninja - El Ícono de Fortnite</h2>
+        <p>Ninja es uno de los streamers más famosos y un pionero en la escena competitiva de Fortnite. Su personalidad carismática y habilidades excepcionales le han permitido alcanzar una gran audiencia y el éxito en múltiples plataformas.</p>
+        <p>Fue uno de los primeros en popularizar Fortnite en la escena global y es reconocido por su destreza en los combates más intensos.</p>
+        <a href="index.html" class="back-button">Volver a la página principal</a>
+    </div>
+
+    <div class="details-img">
+        <img src="images/Ninja.jpg" alt="Ninja">
+    </div>
+</div>
+
+</body>
+</html>
