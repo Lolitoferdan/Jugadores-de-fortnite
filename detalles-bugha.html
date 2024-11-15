@@ -18,68 +18,68 @@
             padding: 0;
             background-color: #181818;
             color: #ddd;
+            letter-spacing: 0.8px;
         }
 
+        /* Header */
         header {
             background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .back-button {
-            display: inline-block;
-            background-color: #ff5722;
             color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 20px;
-            transition: background-color 0.3s ease;
+            padding: 40px 0;
+            text-align: center;
         }
 
-        .back-button:hover {
-            background-color: #e64a19;
+        header h1 {
+            font-size: 40px;
         }
 
+        /* Cuadros y estructura de la página */
         .content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             padding: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .details-text {
-            max-width: 50%;
-            animation: fadeInLeft 1s ease-out;
+        .left-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            animation: fadeInLeft 1s ease-out forwards;
         }
 
-        .details-text h2 {
-            font-size: 40px;
-            color: #fff;
+        .left-box:nth-child(2) {
+            animation-delay: 1s; /* El segundo cuadro entra después */
         }
 
-        .details-text p {
-            font-size: 20px;
-            color: #bbb;
+        .image-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInImage 1s ease-out forwards;
+            animation-delay: 2s; /* La imagen entra al final */
         }
 
-        .details-img {
-            max-width: 40%;
-            animation: fadeInRight 1s ease-out;
-        }
-
-        .details-img img {
+        .image-container img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
+            height: auto;
         }
 
-        /* Animación de Fade-In */
+        /* Animaciones */
         @keyframes fadeInLeft {
             from {
                 opacity: 0;
-                transform: translateX(-50px);
+                transform: translateX(-100%);
             }
             to {
                 opacity: 1;
@@ -87,36 +87,74 @@
             }
         }
 
-        @keyframes fadeInRight {
+        @keyframes fadeInImage {
             from {
                 opacity: 0;
-                transform: translateX(50px);
+                transform: translateX(100%);
             }
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
+
+        /* Títulos y textos */
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Detalles de Bugha</h1>
-</header>
+    <!-- Header -->
+    <header>
+        <h1>Detalles de Bugha</h1>
+    </header>
 
-<div class="content">
-    <div class="details-text">
-        <h2>Bugha - Campeón Mundial de Fortnite</h2>
-        <p>Bugha, cuyo nombre real es Kyle Giersdorf, es un jugador profesional de Fortnite que se destacó al ganar la Copa Mundial de Fortnite 2019, llevándose el primer lugar en la categoría individual.</p>
-        <p>Con su habilidad en la construcción, combate y toma de decisiones rápidas, Bugha ha sido uno de los jugadores más consistentes y respetados en la escena competitiva de Fortnite.</p>
-        <a href="index.html" class="back-button">Volver a la página principal</a>
+    <!-- Contenido -->
+    <div class="content">
+        <!-- Cuadro 1: Historia -->
+        <div class="left-box">
+            <h2>Historia</h2>
+            <p>
+                Bugha, cuyo nombre real es Kyle Giersdorf, es un jugador profesional de Fortnite que alcanzó fama mundial al ganar la Copa Mundial de Fortnite 2019. Su victoria lo catapultó a la cima de la escena competitiva, demostrando habilidades excepcionales y una mentalidad estratégica.
+            </p>
+        </div>
+
+        <!-- Cuadro 2: Sensibilidad y Controles -->
+        <div class="left-box">
+            <h2>Sensibilidad y Controles</h2>
+            <p>
+                Sensibilidad de mira: 0.42<br>
+                Sensibilidad de construcción: 1.20<br>
+                Controles personalizados: Uso de teclado y ratón para una mayor precisión, ajustando las teclas a su estilo.
+            </p>
+        </div>
+
+        <!-- Imagen de Bugha -->
+        <div class="image-container">
+            <img src="images/Bugha.jpg" alt="Bugha">
+        </div>
     </div>
 
-    <div class="details-img">
-        <img src="images/Bugha.jpg" alt="Bugha">
-    </div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
