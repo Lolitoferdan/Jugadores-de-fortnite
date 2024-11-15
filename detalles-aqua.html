@@ -3,148 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de Aqua</title>
-
-    <!-- Favicon -->
+    <title>Detalles - Aqua</title>
     <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
-
-    <!-- Fuente gamer -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
     <style>
         body {
-            font-family: 'Press Start 2P', cursive;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #181818;
-            color: #ddd;
-            letter-spacing: 0.8px;
+            color: #fff;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #222;
-            color: white;
-            padding: 40px 0;
+            background-color: #333;
+            padding: 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 36px;
+            letter-spacing: 2px;
         }
 
         .content {
             display: flex;
+            align-items: flex-start;
             justify-content: space-between;
             padding: 40px;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 40px;
         }
 
-        .left-box {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border-radius: 15px;
-            padding: 20px;
-            width: 45%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            animation: fadeInLeft 1s ease-out forwards;
+        .details {
+            flex: 1;
+            max-width: 50%;
         }
 
-        .left-box:nth-child(2) {
-            animation-delay: 1s;
-        }
-
-        .image-container {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border-radius: 15px;
-            padding: 20px;
-            width: 45%;
-            text-align: center;
-            opacity: 0;
-            animation: fadeInImage 1s ease-out forwards;
-            animation-delay: 2s;
-        }
-
-        .image-container img {
-            width: 100%;
-            border-radius: 10px;
-            height: auto;
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInImage {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        h2 {
+        .details h2 {
             font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.5;
+        .details .box {
+            background-color: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .details .box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #ff5722;
+        }
+
+        .details .box p {
+            font-size: 16px;
+        }
+
+        .player-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .player-image img {
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         }
 
         footer {
-            background-color: #222;
-            color: white;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
             text-align: center;
+            padding: 20px;
+            margin-top: 20px;
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Detalles de Aqua</h1>
-    </header>
+<header>
+    <h1>Detalles de Aqua</h1>
+</header>
 
-    <div class="content">
-        <div class="left-box">
-            <h2>Historia</h2>
-            <p>
-                Aqua es un jugador profesional de Fortnite, conocido por su victoria en la Copa Mundial de Fortnite 2019 en la categoría dúo junto a su compañero Nyhrox. Ha sido un referente en la escena de Fortnite, destacándose por su habilidad con el control y su estrategia durante las partidas.
-            </p>
+<div class="content">
+    <div class="details">
+        <div class="box">
+            <h3>Historia</h3>
+            <p>Aqua, cuyo nombre real es David Wang, es un jugador profesional de Fortnite originario de Austria. Es conocido por su victoria en la Copa Mundial de Fortnite 2019 en el modo dúo junto con su compañero Nyhrox. Su estilo de juego se caracteriza por una precisión impecable y decisiones rápidas bajo presión.</p>
         </div>
-
-        <div class="left-box">
-            <h2>Sensibilidad y Controles</h2>
+        <div class="box">
+            <h3>Sensibilidad y Configuración</h3>
             <p>
-                Sensibilidad de mira: 0.45<br>
-                Sensibilidad de construcción: 1.30<br>
-                Controles personalizados: Prefiere el uso de mando para un control preciso durante el combate, con configuraciones ajustadas a su comodidad.
+                <strong>DPI:</strong> 800<br>
+                <strong>Hz:</strong> 1000<br>
+                <strong>Sensibilidad del eje X:</strong> 5.8%<br>
+                <strong>Sensibilidad del eje Y:</strong> 5.8%<br>
+                <strong>Sensibilidad al apuntar:</strong> 26.9%<br>
+                <strong>Sensibilidad al usar mira:</strong> 31.0%<br>
+                <strong>Sensibilidad al construir:</strong> Desconocido<br>
+                <strong>Sensibilidad al editar:</strong> Desconocido
             </p>
-        </div>
-
-        <div class="image-container">
-            <img src="images/Aqua.jpg" alt="Aqua">
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
-    </footer>
+    <div class="player-image">
+        <img src="Aqua.jpg" alt="Imagen de Aqua">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Detalles de Fortnite | Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
