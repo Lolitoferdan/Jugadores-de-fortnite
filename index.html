@@ -9,40 +9,58 @@
     <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
 
     <style>
+        /* Estilos generales */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #181818; /* Fondo oscuro */
             color: #ddd; /* Texto claro */
+            overflow-x: hidden;
         }
+
+        /* Estilo de la cabecera */
         header {
             background-color: #222; /* Fondo ligeramente más oscuro */
             color: #fff;
-            padding: 20px;
+            padding: 40px 0;
             text-align: center;
         }
+
+        /* Estilo del menú */
         .menu {
             display: flex;
             justify-content: center;
             padding: 20px;
-            background-color: #333; /* Fondo del menú */
+            background-color: #333; /* Fondo oscuro del menú */
         }
+
         .menu a {
+            background-color: #ff5722;
             color: white;
+            font-size: 24px;
+            padding: 15px 40px;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            border-radius: 5px;
+            margin: 0 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .menu a:hover {
-            border-bottom: 2px solid #ff5722;
+            background-color: #e64a19;
+            transform: scale(1.1);
         }
+
+        /* Contenedor de contenido */
         .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
             padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        /* Estilo de las cajas de los jugadores */
         .player-box {
             background-color: #292929; /* Fondo oscuro de los cuadros */
             padding: 20px;
@@ -52,9 +70,13 @@
             transition: transform 0.3s ease-in-out;
             position: relative;
             overflow: hidden;
+            margin-bottom: 40px;
             opacity: 0;
             animation: fadeIn 0.8s forwards;
+            max-width: 500px;
+            width: 100%;
         }
+
         .player-box:nth-child(1) {
             animation-delay: 0.2s;
         }
@@ -64,42 +86,37 @@
         .player-box:nth-child(3) {
             animation-delay: 0.6s;
         }
-        .player-box:hover {
-            transform: scale(1.05);
-        }
+
         .player-box img {
             width: 100%;
-            height: 220px;
+            height: 250px;
             object-fit: cover;
             border-radius: 10px;
-            margin-bottom: 15px; /* Espacio debajo de la imagen */
+            margin-bottom: 15px;
         }
+
         .player-box h2 {
-            font-size: 24px;
+            font-size: 28px;
             color: #fff;
             margin-bottom: 10px;
         }
+
         .player-box p {
             font-size: 16px;
             color: #bbb;
             margin-bottom: 15px;
         }
+
         .player-box .btn {
             background-color: #ff5722;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
         }
+
         .player-box .btn:hover {
             background-color: #e64a19;
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
         }
 
         /* Animación de Fade-In */
@@ -112,6 +129,32 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        /* Estilo del footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Estilo de la imagen de Bugha */
+        .bugha-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .bugha-container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
         }
     </style>
 </head>
@@ -126,10 +169,15 @@
         <a href="acerca.html">Acerca de</a>
     </div>
 
+    <!-- Contenido de jugadores -->
     <div class="content" id="jugadores">
+        <!-- Imagen de Bugha movida hacia abajo -->
+        <div class="bugha-container">
+            <img class="bugha-img" src="images/Bugha.jpg" alt="Bugha">
+        </div>
+
         <!-- Cuadro de Bugha con imagen -->
         <div class="player-box">
-            <img src="images/Bugha.jpg" alt="Bugha">
             <h2>Bugha</h2>
             <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
             <a href="detalles-bugha.html" class="btn">Saber más</a>
