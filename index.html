@@ -3,178 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mejor Jugador de Fortnite</title>
-
-    <!-- Favicon -->
+    <title>Jugadores de Fortnite</title>
     <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
-
-    <!-- Fuente gamer -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
     <style>
         body {
-            font-family: 'Press Start 2P', cursive;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #181818;
-            color: #ddd;
-            letter-spacing: 0.8px; /* Separar las letras un poco */
+            color: #fff;
         }
 
-        /* Estilos de la barra de navegación */
         header {
-            background-color: #222;
-            color: white;
-            padding: 40px 0;
+            background-color: #333;
+            padding: 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 36px;
+            color: #ff5722;
+            letter-spacing: 2px;
         }
 
-        /* Menú */
-        .menu {
+        .container {
             display: flex;
             justify-content: center;
-            padding: 20px;
-            background-color: #333;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 22px;
-            transition: all 0.3s ease;
-        }
-
-        .menu a:hover {
-            color: #ff5722;
-            border-bottom: 2px solid #ff5722;
-        }
-
-        /* Cuadros de los jugadores */
-        .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             padding: 40px;
+            flex-wrap: wrap;
         }
 
-        .player-box {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border-radius: 15px;
+        .card {
+            background-color: #252525;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             overflow: hidden;
-            position: relative;
-            text-align: center;
-            transition: all 0.3s ease;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .player-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-        }
-
-        .player-box img {
+        .card img {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
+            height: auto;
+            border-bottom: 2px solid #333;
         }
 
-        .player-box h3 {
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-content h2 {
             font-size: 24px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            margin-bottom: 10px;
+            margin: 0 0 10px 0;
+            text-align: center;
+            color: #ff5722;
         }
 
-        .player-box p {
+        .card-content p {
             font-size: 16px;
-            color: #bbb;
             margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .btn-more {
+        .button-container {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .button {
             background-color: #ff5722;
-            color: white;
+            color: #fff;
+            border: none;
             padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
-            margin-bottom: 20px; /* Separación del botón con el borde inferior */
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .btn-more:hover {
+        .button:hover {
             background-color: #e64a19;
         }
 
-        /* Animación Fade-In */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Animaciones de carga de los cuadros */
-        .player-box {
-            animation: fadeIn 1s ease-out;
-        }
-
-        /* Footer */
         footer {
-            background-color: #222;
-            color: white;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
             text-align: center;
+            padding: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>El Mejor Jugador de Fortnite</h1>
-    </header>
+<header>
+    <h1>Jugadores de Fortnite</h1>
+</header>
 
-    <!-- Menú -->
-    <div class="menu">
-        <a href="#jugadores">Jugadores</a>
-        <a href="acerca.html">Acerca de</a> <!-- Enlace a la página acerca.html -->
-    </div>
-
-    <!-- Sección Jugadores -->
-    <div class="content" id="jugadores">
-        <div class="player-box">
-            <img src="images/Bugha.jpg" alt="Bugha">
-            <h3>Bugha</h3>
+<div class="container">
+    <div class="card">
+        <img src="Bugha.jpg" alt="Bugha">
+        <div class="card-content">
+            <h2>Bugha</h2>
             <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
-            <a href="detalles-bugha.html" class="btn-more">Saber más</a>
-        </div>
-        <div class="player-box">
-            <img src="images/Aqua.jpg" alt="Aqua">
-            <h3>Aqua</h3>
-            <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
-            <a href="detalles-aqua.html" class="btn-more">Saber más</a>
-        </div>
-        <div class="player-box">
-            <img src="images/Ninja.jpg" alt="Ninja">
-            <h3>Ninja</h3>
-            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo convirtieron en una estrella global.</p>
-            <a href="detalles-ninja.html" class="btn-more">Saber más</a>
+            <div class="button-container">
+                <a href="detalles-Bugha.html" class="button">Saber más</a>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
-    </footer>
+    <div class="card">
+        <img src="Aqua.jpg" alt="Aqua">
+        <div class="card-content">
+            <h2>Aqua</h2>
+            <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
+            <div class="button-container">
+                <a href="detalles-Aqua.html" class="button">Saber más</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Ninja.jpg" alt="Ninja">
+        <div class="card-content">
+            <h2>Ninja</h2>
+            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo convirtieron en una estrella global.</p>
+            <div class="button-container">
+                <a href="detalles-Ninja.html" class="button">Saber más</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Detalles de Fortnite | Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
