@@ -6,14 +6,16 @@
     <title>Jugadores de Fortnite</title>
     <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
     <style>
+        /* Estilo global */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Courier New', monospace; /* Fuente estilo gamer */
             margin: 0;
             padding: 0;
-            background-color: #181818;
+            background-color: #1a1a1a; /* Fondo oscuro */
             color: #fff;
         }
 
+        /* Estilo del encabezado */
         header {
             background-color: #333;
             padding: 20px;
@@ -22,85 +24,99 @@
 
         header h1 {
             font-size: 36px;
-            color: #ff5722;
+            color: #ff4500; /* Naranja brillante para darle un toque gamer */
             letter-spacing: 2px;
+            margin: 0;
+            font-weight: bold;
         }
 
+        /* Contenedor principal */
         .container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 40px;
+            gap: 30px;
+            padding: 50px;
             flex-wrap: wrap;
         }
 
+        /* Estilo de las tarjetas */
         .card {
-            background-color: #252525;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            background-color: #262626;
+            border-radius: 10px;
             overflow: hidden;
             width: 300px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra para darle profundidad */
+            transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
         }
 
         .card img {
             width: 100%;
-            height: auto;
-            border-bottom: 2px solid #333;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 2px solid #ff4500; /* Línea naranja debajo de la imagen */
         }
 
         .card-content {
             padding: 20px;
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-align: center;
         }
 
         .card-content h2 {
-            font-size: 24px;
-            margin: 0 0 10px 0;
-            text-align: center;
-            color: #ff5722;
+            font-size: 22px;
+            color: #ff4500;
+            margin: 10px 0;
+            font-weight: bold;
         }
 
         .card-content p {
-            font-size: 16px;
+            font-size: 14px;
+            color: #ccc;
             margin-bottom: 20px;
-            text-align: justify;
+            line-height: 1.6;
         }
 
+        /* Botón */
         .button-container {
-            text-align: center;
             margin-top: auto;
         }
 
         .button {
-            background-color: #ff5722;
+            background-color: #ff4500;
             color: #fff;
             border: none;
             padding: 10px 20px;
-            text-align: center;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
+            display: inline-block;
         }
 
         .button:hover {
-            background-color: #e64a19;
+            background-color: #e63900;
         }
 
+        /* Estilo del pie de página */
         footer {
             background-color: #333;
-            color: #fff;
+            color: #ccc;
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
+            font-size: 14px;
+            margin-top: 30px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -111,6 +127,7 @@
 </header>
 
 <div class="container">
+    <!-- Tarjeta de Bugha -->
     <div class="card">
         <img src="Bugha.jpg" alt="Bugha">
         <div class="card-content">
@@ -122,6 +139,7 @@
         </div>
     </div>
 
+    <!-- Tarjeta de Aqua -->
     <div class="card">
         <img src="Aqua.jpg" alt="Aqua">
         <div class="card-content">
@@ -133,6 +151,7 @@
         </div>
     </div>
 
+    <!-- Tarjeta de Ninja -->
     <div class="card">
         <img src="Ninja.jpg" alt="Ninja">
         <div class="card-content">
@@ -146,7 +165,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2024 Detalles de Fortnite | Todos los derechos reservados</p>
+    <p>&copy; 2024 Jugadores de Fortnite | Todos los derechos reservados</p>
 </footer>
 
 </body>
