@@ -4,68 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles de Ninja</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Favicon -->
+    <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
+
+    <!-- Fuente gamer -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #181818;
+            color: #ddd;
         }
+
         header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
+            background-color: #222;
+            color: #fff;
             text-align: center;
+            padding: 40px 0;
         }
-        .content {
-            padding: 20px;
-        }
-        .player-details {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .player-details h2 {
-            font-size: 28px;
-            color: #333;
-        }
-        .player-details p {
-            font-size: 18px;
-            color: #555;
-        }
-        .btn-back {
+
+        .back-button {
             display: inline-block;
-            margin-top: 20px;
             background-color: #ff5722;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
+            margin: 20px;
+            transition: background-color 0.3s ease;
         }
-        .btn-back:hover {
+
+        .back-button:hover {
             background-color: #e64a19;
         }
-    </style>
-</head>
-<body>
 
-    <header>
-        <h1>Detalles de Ninja</h1>
-    </header>
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+        }
 
-    <div class="content">
-        <div class="player-details">
-            <h2>Ninja</h2>
-            <p>Ninja es un streamer y jugador profesional conocido en todo el mundo por popularizar Fortnite. Fue uno de los primeros en hacer de Fortnite una sensación global debido a su estilo de juego y su presencia en plataformas de streaming como Twitch.</p>
-            <p>Aunque Ninja no ganó la Copa Mundial de Fortnite, su impacto en la comunidad de Fortnite es inmenso. Su habilidad para conectar con la audiencia y su estilo de juego entretenido lo han convertido en una de las figuras más influyentes de la escena de los videojuegos.</p>
-            <p>A lo largo de su carrera, Ninja ha trabajado con muchas marcas y ha continuado siendo una de las personalidades más famosas en la comunidad de juegos.</p>
-            <a href="index.html" class="btn-back">Volver al menú principal</a>
-        </div>
-    </div>
+        .details-text {
+            max-width: 50%;
+            animation: fadeInLeft 1s ease-out;
+        }
 
-</body>
-</html>
+        .details-text h2 {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .details-text p {
+            font-size: 20px;
+            color: #bbb;
+        }
+
+        .details-img {
+            max-width: 40%;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .details-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+       
