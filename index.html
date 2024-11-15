@@ -8,194 +8,194 @@
     <!-- Favicon -->
     <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
 
+    <!-- Fuente gamer -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
-        /* Estilos generales */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
-            background-color: #181818; /* Fondo oscuro */
-            color: #ddd; /* Texto claro */
-            overflow-x: hidden;
+            background-color: #181818;
+            color: #ddd;
         }
 
-        /* Estilo de la cabecera */
+        /* Estilos de la barra de navegación */
         header {
-            background-color: #222; /* Fondo ligeramente más oscuro */
-            color: #fff;
+            background-color: #222;
+            color: white;
             padding: 40px 0;
             text-align: center;
         }
 
-        /* Estilo del menú */
+        header h1 {
+            font-size: 40px;
+        }
+
+        /* Menú */
         .menu {
             display: flex;
             justify-content: center;
             padding: 20px;
-            background-color: #333; /* Fondo oscuro del menú */
+            background-color: #333;
         }
 
         .menu a {
-            background-color: #ff5722;
             color: white;
-            font-size: 24px;
-            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 5px;
             margin: 0 20px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 22px;
+            transition: all 0.3s ease;
         }
 
         .menu a:hover {
-            background-color: #e64a19;
-            transform: scale(1.1);
+            color: #ff5722;
+            border-bottom: 2px solid #ff5722;
         }
 
-        /* Contenedor de contenido */
+        /* Cuadros de los jugadores */
         .content {
-            padding: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
         }
 
-        /* Estilo de las cajas de los jugadores */
         .player-box {
-            background-color: #292929; /* Fondo oscuro de los cuadros */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-            position: relative;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
             overflow: hidden;
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeIn 0.8s forwards;
-            max-width: 500px;
-            width: 100%;
+            position: relative;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .player-box:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-        .player-box:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-        .player-box:nth-child(3) {
-            animation-delay: 0.6s;
+        .player-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         }
 
         .player-box img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            border-radius: 15px;
         }
 
-        .player-box h2 {
-            font-size: 28px;
-            color: #fff;
-            margin-bottom: 10px;
+        .player-box h3 {
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .player-box p {
             font-size: 16px;
             color: #bbb;
-            margin-bottom: 15px;
         }
 
-        .player-box .btn {
+        .btn-more {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #ff5722;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
-        .player-box .btn:hover {
+        .btn-more:hover {
             background-color: #e64a19;
         }
 
-        /* Animación de Fade-In */
+        /* Animación Fade-In */
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
-        /* Estilo del footer */
-        footer {
-            background-color: #222;
+        /* Página Acerca de */
+        .about {
+            padding: 40px;
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
         }
 
-        /* Estilo de la imagen de Bugha */
-        .bugha-img {
-            width: 100%;
-            height: 250px; /* Ajuste de altura dentro del cuadro */
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
+        .about h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
 
-        .bugha-container {
-            max-width: 500px;
-            width: 100%;
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            animation: fadeIn 1s ease-in-out;
         }
+
+        /* Animaciones de carga de los cuadros */
+        .player-box {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Detalles de la imagen */
+        .details-img {
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <h1>El Mejor Jugador de Fortnite</h1>
     </header>
 
+    <!-- Menú -->
     <div class="menu">
         <a href="#jugadores">Jugadores</a>
-        <a href="acerca.html">Acerca de</a>
+        <a href="#acerca">Acerca de</a>
     </div>
 
-    <!-- Contenido de jugadores -->
+    <!-- Sección Jugadores -->
     <div class="content" id="jugadores">
-        <!-- Cuadro de Bugha con imagen dentro -->
         <div class="player-box">
-            <img class="bugha-img" src="images/Bugha.jpg" alt="Bugha">
-            <h2>Bugha</h2>
+            <img src="images/Bugha.jpg" alt="Bugha">
+            <h3>Bugha</h3>
             <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
-            <a href="detalles-bugha.html" class="btn">Saber más</a>
+            <a href="detalles-bugha.html" class="btn-more">Saber más</a>
         </div>
-
-        <!-- Cuadro de Aqua con imagen -->
         <div class="player-box">
             <img src="images/Aqua.jpg" alt="Aqua">
-            <h2>Aqua</h2>
+            <h3>Aqua</h3>
             <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
-            <a href="detalles-aqua.html" class="btn">Saber más</a>
+            <a href="detalles-aqua.html" class="btn-more">Saber más</a>
         </div>
-
-        <!-- Cuadro de Ninja con imagen -->
         <div class="player-box">
             <img src="images/Ninja.jpg" alt="Ninja">
-            <h2>Ninja</h2>
-            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo hicieron ser una estrella.</p>
-            <a href="detalles-ninja.html" class="btn">Saber más</a>
+            <h3>Ninja</h3>
+            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo convirtieron en una estrella global.</p>
+            <a href="detalles-ninja.html" class="btn-more">Saber más</a>
         </div>
     </div>
 
+    <!-- Sección Acerca de -->
+    <div class="about" id="acerca">
+        <h2>Acerca de este sitio</h2>
+        <p>Este sitio está dedicado a los jugadores más destacados de Fortnite. Aquí podrás conocer más sobre sus logros, estilo de juego y cómo llegaron a la cima del mundo competitivo de Fortnite.</p>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
     </footer>
