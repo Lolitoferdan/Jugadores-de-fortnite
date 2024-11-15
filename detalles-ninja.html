@@ -12,43 +12,136 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
-        /* Estilo igual que el de Bugha, solo cambiar el contenido */
+        body {
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #181818;
+            color: #ddd;
+            letter-spacing: 0.8px;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .left-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            animation: fadeInLeft 1s ease-out forwards;
+        }
+
+        .left-box:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .image-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInImage 1s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>Detalles de Ninja</h1>
     </header>
 
-    <!-- Contenido -->
     <div class="content">
-        <!-- Cuadro 1: Historia -->
         <div class="left-box">
             <h2>Historia</h2>
             <p>
-                Ninja, conocido como Tyler Blevins, es uno de los jugadores más icónicos en la historia de Fortnite. Fue uno de los primeros en alcanzar fama mundial a través del juego, gracias a su habilidad y su gran presencia en plataformas de streaming como Twitch y YouTube.
+                Ninja, conocido por su nombre real Richard Tyler Blevins, es uno de los streamers más populares y exitosos de Fortnite. Se hizo famoso por su habilidad en el juego y por sus transmisiones en vivo que han acumulado millones de seguidores. Su energía y carisma lo han convertido en una de las personalidades más destacadas de los esports.
             </p>
         </div>
 
-        <!-- Cuadro 2: Sensibilidad y Controles -->
         <div class="left-box">
             <h2>Sensibilidad y Controles</h2>
             <p>
-                Sensibilidad de mira: 0.40<br>
-                Sensibilidad de construcción: 1.50<br>
-                Controles personalizados: Ninja usa un teclado y ratón con configuraciones para máxima precisión, y su setup incluye una alta sensibilidad para ejecutar movimientos rápidos.
+                Sensibilidad de mira: 0.50<br>
+                Sensibilidad de construcción: 1.00<br>
+                Controles personalizados: Prefiere jugar con teclado y ratón para mantener su precisión, especialmente en combates intensos.
             </p>
         </div>
 
-        <!-- Imagen de Ninja -->
         <div class="image-container">
             <img src="images/Ninja.jpg" alt="Ninja">
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
     </footer>
