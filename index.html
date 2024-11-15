@@ -8,10 +8,10 @@
     <style>
         /* Estilo global */
         body {
-            font-family: 'Courier New', monospace; /* Fuente estilo gamer */
+            font-family: 'Courier New', monospace;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a; /* Fondo oscuro */
+            background-color: #1a1a1a;
             color: #fff;
         }
 
@@ -20,14 +20,29 @@
             background-color: #333;
             padding: 20px;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
             font-size: 36px;
-            color: #ff4500; /* Naranja brillante para darle un toque gamer */
+            color: #ff4500;
             letter-spacing: 2px;
             margin: 0;
             font-weight: bold;
+        }
+
+        header nav a {
+            color: #ff4500;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #e63900;
         }
 
         /* Contenedor principal */
@@ -45,7 +60,7 @@
             border-radius: 10px;
             overflow: hidden;
             width: 300px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra para darle profundidad */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -53,21 +68,18 @@
         }
 
         .card:hover {
-            transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+            transform: translateY(-10px);
         }
 
         .card img {
             width: 100%;
             height: 300px;
             object-fit: cover;
-            border-bottom: 2px solid #ff4500; /* Línea naranja debajo de la imagen */
+            border-bottom: 2px solid #ff4500;
         }
 
         .card-content {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             text-align: center;
         }
 
@@ -124,41 +136,44 @@
 
 <header>
     <h1>Jugadores de Fortnite</h1>
+    <nav>
+        <a href="acerca.html">Acerca de</a>
+    </nav>
 </header>
 
 <div class="container">
     <!-- Tarjeta de Bugha -->
     <div class="card">
-        <img src="Bugha.jpg" alt="Bugha">
+        <img src="bugha.jpg" alt="Bugha">
         <div class="card-content">
             <h2>Bugha</h2>
             <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
             <div class="button-container">
-                <a href="detalles-Bugha.html" class="button">Saber más</a>
+                <a href="detalles-bugha.html" class="button">Saber más</a>
             </div>
         </div>
     </div>
 
     <!-- Tarjeta de Aqua -->
     <div class="card">
-        <img src="Aqua.jpg" alt="Aqua">
+        <img src="aqua.jpg" alt="Aqua">
         <div class="card-content">
             <h2>Aqua</h2>
             <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
             <div class="button-container">
-                <a href="detalles-Aqua.html" class="button">Saber más</a>
+                <a href="detalles-aqua.html" class="button">Saber más</a>
             </div>
         </div>
     </div>
 
     <!-- Tarjeta de Ninja -->
     <div class="card">
-        <img src="Ninja.jpg" alt="Ninja">
+        <img src="ninja.jpg" alt="Ninja">
         <div class="card-content">
             <h2>Ninja</h2>
             <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad lo convirtieron en una estrella global.</p>
             <div class="button-container">
-                <a href="detalles-Ninja.html" class="button">Saber más</a>
+                <a href="detalles-ninja.html" class="button">Saber más</a>
             </div>
         </div>
     </div>
