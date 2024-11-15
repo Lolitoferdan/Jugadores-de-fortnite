@@ -1,176 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>El Mejor Jugador de Fortnite</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- O si usas PNG -->
-    <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
-</head>
- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Brutal</title>
-    <style>
-        /* Reset de márgenes y padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
 
+    <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #ff4e50, #f9d423);
-            color: white;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
         }
-
-        /* Estilo para el encabezado */
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo del menú de navegación */
-        nav {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        nav ul li {
-            font-size: 1.2rem;
-            padding: 10px 20px;
+        header {
             background-color: #333;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li:hover {
-            background-color: #f9d423;
-        }
-
-        /* Estilo para los enlaces */
-        a {
-            text-decoration: none;
             color: white;
-            font-weight: bold;
-            display: block;
-            height: 100%;
-            width: 100%;
+            padding: 20px;
             text-align: center;
-            line-height: 50px;
         }
-
-        /* Sección con contenido */
-        .content {
+        .menu {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            max-width: 800px;
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-color: #222;
         }
-
-        .content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        .content p {
-            font-size: 1.1rem;
-            color: #ddd;
-            text-align: center;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            background-color: #f9d423;
-            color: #333;
-            font-size: 1.1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border: none;
-        }
-
-        .btn:hover {
-            background-color: #ff4e50;
+        .menu a {
             color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
         }
-
-        /* Animación de entrada para el contenido */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        .menu a:hover {
+            border-bottom: 2px solid #ff5722;
         }
-
         .content {
-            animation: fadeIn 2s ease-in-out;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
-
+        .player-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .player-box:hover {
+            transform: scale(1.05);
+        }
+        .player-box h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .player-box p {
+            font-size: 16px;
+            color: #555;
+        }
+        .player-box .btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .player-box .btn:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
-    <h1>Bienvenido a la Página Brutal</h1>
+    <header>
+        <h1>El Mejor Jugador de Fortnite</h1>
+    </header>
 
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contenido principal -->
-    <div class="content" id="inicio">
-        <h2>¿Qué es esta página?</h2>
-        <p>Este es un ejemplo de una página web con un diseño atractivo y moderno. Aquí puedes explorar nuestro contenido y ver cómo podemos mejorar la experiencia visual con un estilo fresco y moderno.</p>
-        <button class="btn" onclick="window.location.href='#servicios'">Ver Servicios</button>
+    <div class="menu">
+        <a href="#jugadores">Jugadores</a>
+        <a href="#about">Acerca de</a>
+        <a href="#contact">Contacto</a>
     </div>
 
-    <!-- Sección de servicios -->
-    <div class="content" id="servicios">
-        <h2>Servicios Ofrecidos</h2>
-        <p>Te ofrecemos una variedad de servicios que van desde diseño web, desarrollo de aplicaciones móviles, hasta marketing digital. ¡Descubre cómo podemos ayudarte a crecer!</p>
-        <button class="btn" onclick="window.location.href='#contacto'">Contactanos</button>
+    <div class="content" id="jugadores">
+        <div class="player-box">
+            <h2>Bugha</h2>
+            <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
+            <a href="detalles.html" class="btn">Saber más</a>
+        </div>
+        <div class="player-box">
+            <h2>Aqua</h2>
+            <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
+            <a href="detalles.html" class="btn">Saber más</a>
+        </div>
+        <div class="player-box">
+            <h2>Ninja</h2>
+            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad le hicieron ser una estrella.</p>
+            <a href="detalles.html" class="btn">Saber más</a>
+        </div>
     </div>
 
-    <!-- Sección de contacto -->
-    <div class="content" id="contacto">
-        <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta o deseas trabajar con nosotros, no dudes en ponerte en contacto. ¡Estamos aquí para ayudarte!</p>
-        <button class="btn" onclick="window.location.href='mailto:contacto@pagina.com'">Enviar un Email</button>
-    </div>
+    <footer>
+        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
