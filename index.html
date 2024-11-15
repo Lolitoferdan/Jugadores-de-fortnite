@@ -3,136 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mejor Jugador de Fortnite</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="icono-de-favoritos.png" type="image/x-icon">
-
+    <title>Jugadores de Fortnite</title>
+    <link rel="icon" href="images/bugha.jpg"> <!-- Aquí puedes cambiar el icono de la página -->
     <style>
+        /* Estilo general para el cuerpo */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .menu {
+
+        /* Contenedor de los jugadores */
+        .main-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
-            background-color: #222;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        .menu a:hover {
-            border-bottom: 2px solid #ff5722;
-        }
-        .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .player-box {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .player-box:hover {
-            transform: scale(1.05);
-        }
-        .player-box h2 {
-            font-size: 24px;
-            color: #333;
-        }
-        .player-box p {
-            font-size: 16px;
-            color: #555;
-        }
-        .player-box .btn {
-            background-color: #ff5722;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        .player-box .btn:hover {
-            background-color: #e64a19;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>El Mejor Jugador de Fortnite</h1>
-    </header>
-
-    <div class="menu">
-        <a href="#jugadores">Jugadores</a>
-        <a href="#Acerca">Acerca de</a>
-        <a href="#contact">Contacto</a>
-    </div>
-
-    <div class="content" id="jugadores">
-        <div class="player-box">
-            <h2>Bugha</h2>
-            <p>Ganador de la Copa Mundial de Fortnite 2019. Un jugador profesional que se destacó por su habilidad y estrategia.</p>
-            <a href="detalles-bugha.html" class="btn">Saber más</a>
-        </div>
-        <div class="player-box">
-            <h2>Aqua</h2>
-            <p>Un jugador europeo increíblemente talentoso, famoso por sus victorias en competiciones internacionales.</p>
-            <a href="detalles-aqua.html" class="btn">Saber más</a>
-        </div>
-        <div class="player-box">
-            <h2>Ninja</h2>
-            <p>Un streamer de renombre mundial que popularizó Fortnite. Su estilo de juego y personalidad le hicieron ser una estrella.</p>
-            <a href="detalles-ninja.html" class="btn">Saber más</a>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 El Mejor Jugador de Fortnite | Todos los derechos reservados</p>
-    </footer>
-<a href="detalles-bugha.html" class="btn">Saber más</a>
-<a href="detalles-aqua.html" class="btn">Saber más</a>
-<a href="detalles-ninja.html" class="btn">Saber más</a>
-<a href="acerca.html" class="btn">Acerca de</a>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugadores de Fortnite</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
         }
 
-        /* Estilo general para los cuadros de los jugadores */
+        /* Estilo para los cuadros de los jugadores */
         .player-box {
             width: 300px;
             height: 400px;
@@ -145,17 +35,11 @@
             position: relative;
             text-align: center;
             padding: 20px;
+            background-size: cover;
+            background-position: center;
         }
 
-        /* Estilo para la imagen dentro del cuadro */
-        .player-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Hace que la imagen ocupe todo el cuadro */
-            border-radius: 15px;
-        }
-
-        /* Estilo para el título dentro del cuadro */
+        /* Título del jugador */
         .player-box h3 {
             position: absolute;
             bottom: 20px;
@@ -165,7 +49,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
-        /* Estilo para el enlace de "Saber más" */
+        /* Estilo para el botón de "Saber más" */
         .btn-more {
             position: absolute;
             bottom: 10px;
@@ -183,31 +67,55 @@
             background-color: #e64a19;
         }
 
+        /* Estilo del footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilo de los enlaces en el footer */
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Cuadro del jugador Bugha con imagen de GitHub -->
-    <div class="player-box">
-        <img src="Bugha.jpg" alt="Bugha">
-        <h3>Bugha</h3>
-        <a href="detalles-bugha.html" class="btn-more">Saber más</a>
+    <!-- Contenedor principal con los jugadores -->
+    <div class="main-container">
+        <!-- Cuadro de Bugha con su imagen -->
+        <div class="player-box" style="background-image: url('images/bugha.jpg');">
+            <h3>Bugha</h3>
+            <a href="detalles-bugha.html" class="btn-more">Saber más</a>
+        </div>
+
+        <!-- Cuadro de Aqua con su imagen -->
+        <div class="player-box" style="background-image: url('images/aqua.jpg');">
+            <h3>Aqua</h3>
+            <a href="detalles-aqua.html" class="btn-more">Saber más</a>
+        </div>
+
+        <!-- Cuadro de Ninja con su imagen -->
+        <div class="player-box" style="background-image: url('images/ninja.jpg');">
+            <h3>Ninja</h3>
+            <a href="detalles-ninja.html" class="btn-more">Saber más</a>
+        </div>
     </div>
 
-    <!-- Cuadro del jugador Aqua con imagen de GitHub -->
-    <div class="player-box">
-        <img src="Aqua.jpg" alt="Aqua">
-        <h3>Aqua</h3>
-        <a href="detalles-aqua.html" class="btn-more">Saber más</a>
-    </div>
-
-    <!-- Cuadro del jugador Ninja con imagen de GitHub -->
-    <div class="player-box">
-        <img src="Ninja.jpg" alt="Ninja">
-        <h3>Ninja</h3>
-        <a href="detalles-ninja.html" class="btn-more">Saber más</a>
-    </div>
+    <!-- Footer con enlace de "Acerca de" -->
+    <footer>
+        <p>&copy; 2024 Todos los derechos reservados</p>
+        <a href="acerca.html">Acerca de</a>
+    </footer>
 
 </body>
 </html>
-
