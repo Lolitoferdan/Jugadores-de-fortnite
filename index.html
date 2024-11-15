@@ -13,11 +13,12 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #181818; /* Fondo oscuro */
+            color: #ddd; /* Texto claro */
         }
         header {
-            background-color: #333;
-            color: white;
+            background-color: #222; /* Fondo ligeramente más oscuro */
+            color: #fff;
             padding: 20px;
             text-align: center;
         }
@@ -25,7 +26,7 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            background-color: #222;
+            background-color: #333; /* Fondo del menú */
         }
         .menu a {
             color: white;
@@ -38,36 +39,50 @@
         }
         .content {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 30px;
         }
         .player-box {
-            background-color: #fff;
+            background-color: #292929; /* Fondo oscuro de los cuadros */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             text-align: center;
             transition: transform 0.3s ease-in-out;
             position: relative;
             overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+        .player-box:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .player-box:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .player-box:nth-child(3) {
+            animation-delay: 0.6s;
         }
         .player-box:hover {
             transform: scale(1.05);
         }
         .player-box img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
             border-radius: 10px;
+            margin-bottom: 15px; /* Espacio debajo de la imagen */
         }
         .player-box h2 {
             font-size: 24px;
-            color: #333;
+            color: #fff;
+            margin-bottom: 10px;
         }
         .player-box p {
             font-size: 16px;
-            color: #555;
+            color: #bbb;
+            margin-bottom: 15px;
         }
         .player-box .btn {
             background-color: #ff5722;
@@ -75,32 +90,28 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 15px;
         }
         .player-box .btn:hover {
             background-color: #e64a19;
         }
         footer {
-            background-color: #333;
+            background-color: #222;
             color: white;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
         }
-        .btn-more {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #ff5722;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn-more:hover {
-            background-color: #e64a19;
+
+        /* Animación de Fade-In */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -113,7 +124,6 @@
     <div class="menu">
         <a href="#jugadores">Jugadores</a>
         <a href="acerca.html">Acerca de</a>
-        <a href="#contact">Contacto</a>
     </div>
 
     <div class="content" id="jugadores">
